@@ -1,0 +1,116 @@
+
+.app {
+  text-align: center;
+
+  .wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+
+    @media (max-width: 766px) {
+      &.active {
+          display: block;
+      }
+    }
+  }
+
+  section {
+    background-color: #f1e8dc;
+    min-height: 100vh;
+    padding: 30px 16px;
+
+    .portfolio-subtitle {
+      display: block;
+      position: relative;
+      margin-bottom: 50px;
+      text-align: left;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -40%;
+        color: #000;
+        background-color: #e60a0a;
+        border-radius: 20px;
+        width: 70px;
+        height: 5px;
+
+        @media (min-width: 767px) {
+          width: 120px;
+          height: 7px;
+        }
+      }
+
+      @media (min-width: 767px) {
+        font-size: 40px;
+        margin-bottom: 60px;
+      }
+    }
+
+    @media (min-width: 767px) {
+      padding: 50px 20px 50px 280px;
+    }
+  }
+
+  .burgerbutton {
+    display: block;
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 4;
+
+    @media (min-width: 767px) {
+      display: none;
+    }
+
+    span {
+        width: 100%;
+        transition: .5s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        height: 4px;
+        background: #000;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        transform: rotate(0);
+
+        &:nth-child(1) {
+            top: 0;
+        }
+        &:nth-child(2) {
+            top: 44%;
+            width: 60%;
+        }
+        &:nth-child(3) {
+            bottom: 0;
+        }
+    }
+    &.active {
+        span {
+          background: #FFF;
+
+          &:nth-child(1) {
+              top: 18px;
+              transform: rotate(-45deg);
+          }
+          &:nth-child(2) {
+              width: 0%;
+          }
+          &:nth-child(3) {
+              bottom: 18px;
+              transform: rotate(45deg);
+          }
+        }
+    }
+  }
+}

@@ -1,0 +1,273 @@
+.aboutme-section {
+    padding-bottom: 80px !important;
+
+    .portfolio-subtitle {
+
+    }
+
+    .aboutme-content  {
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+
+        .profile-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+
+            @media (min-width: 1023px) {
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .profile-image-wrapper {
+                position: relative;
+                background-image: url('../../assets/images/georgeB.jpg');
+                background-size: cover;
+                background-position: 90%;
+                max-width: 200px;
+                width: 100%;
+                height: 200px;
+                border-radius: 50%;
+                animation: float 6s ease-in-out infinite;
+                border: 5px solid #fff;
+                cursor: pointer;
+                margin-bottom: 30px;
+
+                @media (min-width: 1023px) {
+                    margin-bottom: 0;
+                }
+                
+                .profile-alert {
+                    opacity: 0;
+                    padding: 8px 16px 0;
+                    position: absolute;
+                    top: -10%;
+                    right: -30%;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    background-color: #d31d1d;
+                    transition: all 0.6s ease-in-out;
+                    width: auto;
+                    height: 40px;
+
+                    @media (min-width: 600px) {
+                        top: -10%;
+                        right: -50%;
+                    }
+
+                    &.active {
+                        opacity: 1;
+                    }
+
+                    div {
+                        position: absolute;
+                        left: 0;
+                        bottom: -29px;
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 30px 30px 0 0;
+                        border-color: #d31d1d transparent transparent transparent;
+                    }
+
+                    .alert-text {
+                        text-align: center;
+                        color: #fff;
+                        
+                    }
+                }
+            }
+
+            .profile-content-wrapper {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                @media (min-width: 1023px) {
+                    width: 60%;
+                }
+
+                .profile-title {
+                    text-align: center;
+                    font-size: 30px;
+                    margin-bottom: 20px;
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: #900012;
+                    color: white;
+                    letter-spacing: 5px;
+
+                    @media (min-width: 1023px) {
+                        text-align: left;
+                    }
+                }
+
+                .profile-text {
+                    max-width: 500px;
+                    margin-bottom: 20px;
+                    text-align: center;
+
+                    @media (min-width: 1023px) {
+                        text-align: left;
+                        max-width: 400px;
+                    }
+                }
+
+                .profile-list {
+                    max-width: 450px;
+                    width: 100%;
+
+                    .profile-item {
+                        display: flex;
+                        align-items: flex-start;
+                        margin-bottom: 10px;
+                        line-height: 24px;
+
+                        .item-topic {
+                            width: 48%;
+                            text-align: left;
+                            color: #900012;
+                            font-weight: 600;
+                        }
+
+                        .item-information {
+                            background-color: #db504c;
+                            color: #f1e8dc;
+                            border-radius: 5px;
+                            padding: 2px;
+                            width: 48%;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+
+        .skills-wrapper {
+            .skills-title, .currently-title {
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+
+            .skills-list {
+                display: flex;
+                justify-content: center;
+                gap: 16px;
+                flex-wrap: wrap;
+                margin-bottom: 50px;
+
+                .skills-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    padding: 6px;
+                    border-radius: 5px;
+                    background-color: #fff;
+                    cursor: pointer;
+                    transition: transform 0.6s;
+                    transform-style: preserve-3d;
+                    -webkit-touch-callout: none; 
+                    -webkit-user-select: none;   
+                    -khtml-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;       
+                    user-select: none;
+
+                    &:hover {
+                        transform: rotateX(180deg);
+                        background-color: #900012;
+
+                        svg {
+                            width: 24px;
+                            height: 24px;
+                            color: #f1e8dc;
+                            transform: rotateX(180deg);
+                        }
+    
+                        span {
+                            color: #f1e8dc;
+                            transform: rotateX(180deg);
+                        }
+                    }
+
+                    svg {
+                        width: 24px;
+                        height: 24px;
+                        color: #900012;
+                    }
+
+                    span {
+                        color: #900012;
+                    }
+                }
+            }
+        }
+
+        .area-wrapper {
+            .area-title {
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+
+            .area-list {
+                display: flex;
+                // align-items: stretch;
+                flex-wrap: wrap;
+                gap: 20px;
+
+                @media screen {
+                    
+                }
+
+                .area-item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    background-color: #ea8179;
+                    padding: 20px;
+                    border-radius: 10px;
+                    gap: 10px;
+                    flex: 1 0 0;
+
+                    svg {
+                        width: 40px;
+                        height: 40px;
+                        color: #f1d8ab;
+                    }
+
+                    .area-item-title {
+                        font-size: 22px;
+                        text-align: left;
+                        color: #f1d8ab;
+                    }
+
+                    .area-item-text {
+                        text-align: left;
+                        font-weight: 500;
+                        color: #900012;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
